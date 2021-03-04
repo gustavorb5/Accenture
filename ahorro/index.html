@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Investment</title>
+</head>
+
+<body>
+    <form id="ahorro">
+        <table>
+          <tr><td colspan="3"><b>Ingrese su informacion: </b></td></tr>
+          <tr>
+            <td>1)</td>
+            <td>Dinero a depositar: </td>
+            <td><input type="text" id="deposito" size="12" ></td>
+          </tr>
+          <tr>
+            <td>2)</td>
+            <td>Porcentaje anual de interes: </td>
+            <td><input type="text" id="interes" size="12" ></td>
+          </tr>
+          <tr>
+            <td>3)</td>
+            <td>Tiempo de pago en meses: </td>
+            <td><input type="text" id="meses" size="12"></td>
+          </tr>
+          <tr><td colspan="3">
+            <input type="button" value="Compute" onclick="calculate();">
+          </td></tr>
+          <tr><td colspan="3">
+            <b>Pago: </b>
+          </td></tr>
+          <tr>
+            <td>4)</td>
+            <td>Su pago mensual sera de: </td>
+            <td><input type="text" id="mensual" size="12"></td>
+          </tr>
+          <tr>
+            <td>5)</td>
+            <td>Su pago total sera de: </td>
+            <td><input type="text" id="total" size="12"></td>
+          </tr>
+        </table>
+      </form>
+      <script src="calculate.js"></script>
+</body>
+
+</html>

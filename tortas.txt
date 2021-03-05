@@ -1,0 +1,27 @@
+const priceCalculation = () => {
+    var name = document.getElementById("name").value;
+    var quantity = document.getElementById("quantity_order").value;    
+    var price = 45 //todas las tortas son iguales y valen lo mismo, best bakery ever
+    let tortasTotales = 0;
+    let precioFinal = 0;
+
+    if(quantity < 10){
+        tortasTotales = quantity;
+        precioFinal = tortasTotales*price;
+    } else{
+        let tortasGratis = Math.round(quantity/15);
+        tortasTotales= quantity+tortasGratis;
+        let precioSinDescuento = (tortasTotales*45);
+        let descuento = 0;
+        if(quantity>100 && quantity < 501){
+            descuento = (precioSinDescuento*10)/100;
+            precioFinal = precioSinDescuento - descuento;
+        } else {
+            descuento = (precioSinDescuento*15)/100;
+            precioFinal = precioSinDescuento - descuento;
+        }
+    }
+}
+
+    
+    document.getElementById("order_total").value =  `Compraste ${tortasTotales} al precio de $ ${precioFinal}`;
